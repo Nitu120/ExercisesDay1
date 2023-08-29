@@ -4,14 +4,18 @@
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("1 Get-Quote 2 Quit");
+            Console.WriteLine("Enter your choice");
+            int input = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter Product Code and Quantity");
             string productCode = Console.ReadLine();
             int quantity = int.Parse(Console.ReadLine());
             double price = 0.0;
             double discount = 0.15;
 
-
-            switch (productCode)
+            if (input == 1)
+            { 
+                switch (productCode)
             {
                 case "BG-127":
                     if (quantity < 25)
@@ -113,8 +117,11 @@
 
 
             }
-             
 
+            }else if(input == 2)
+            {
+                Environment.Exit(0);
+            }
 
 
 
